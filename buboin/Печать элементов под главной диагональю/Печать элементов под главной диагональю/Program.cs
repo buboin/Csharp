@@ -15,7 +15,7 @@ namespace Матрица
             Random rnd = new Random();
             for (int i = 0; i < mtr.Length; i++)
             {
-                mtr[i] = new int[5];
+                mtr[i] = new int[4];
                 for (int j = 0; j < mtr[i].Length; j++)
                 {
                     mtr[i][j] = rnd.Next(100);
