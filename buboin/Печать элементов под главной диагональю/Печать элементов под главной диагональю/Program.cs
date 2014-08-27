@@ -27,9 +27,9 @@ namespace Матрица
             System.Console.WriteLine();
             System.Console.WriteLine();
 
-            for (int i = 0; i < mtr[0].Length; i++)
+            for (int i = 0; i < mtr.Length; i++)
             {
-                for (int j = 0; j < mtr.Length; j++)
+                for (int j = 0; j < mtr[i].Length; j++)
                 {
                     if (i >= j)
                     {

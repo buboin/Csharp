@@ -15,13 +15,13 @@ namespace Сортировка_массива
         {
             int buf;
             bool f = true;
-            while(f)
+            do
             {
                 f = false;
-                int i =0;
-                while ( i < mass.Length - 1 )
+                int i = 0;
+                while (i < mass.Length - 1)
                 {
-                    
+
                     if (mass[i] < mass[i + 1])
                     {
                         buf = mass[i];
@@ -32,6 +32,7 @@ namespace Сортировка_массива
                     i++;
                 }
             }
+            while (f);
 
             return mass;
         }
@@ -47,19 +48,21 @@ namespace Сортировка_массива
             n = int.Parse(Console.ReadLine());
             int[] mass = new int[n];
             i = 0;
-            while ( i < n )
+            do
             {
                 System.Console.Write("A[{0}]=", i);
                 mass[i] = int.Parse(System.Console.ReadLine());// ввод значений массива вручную
                 i++;
             }
+            while (i < n);
             mass = SortWithReturn(mass);
             i = 0;
-            while (i < n)
+            do
             {
                 System.Console.Write("\t A[{0}] = {1}", i, mass[i]);
                 i++;
             }
+            while (i < n);
             Console.ReadKey();
         }
 
