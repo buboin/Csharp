@@ -14,13 +14,16 @@ namespace Задание2
             int N;
             Console.WriteLine("Введите число, до которого нужно найти простые числа");
             N = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= N; i++)// цикл от 1 до заданного N
+            int i = 1;
+            do 
             {
                 if (Simple(i))// обращение к методу проверки на простоту
                 {
                     Console.Write(", " +i.ToString());
                 }
+                i++;    
             }
+            while (i <= N);
             Console.ReadKey();
 
         }
@@ -29,14 +32,19 @@ namespace Задание2
 
         public static bool Simple(int N)// N равно текущему значению i
         {
-            for (int j = 2; j <= N-1; j++)
+            int j = 2;
+            do
             {
                 if (N % j == 0)// ищем числа, на которые может поделиться наше число без остатка
                 {
-                    return false; // нашлось, не печатаем
+                    return false; 
                 }
+                j++;
             }
-            return true;// не нашлось, печатаем
+            while (j <= N - 1);
+            
+            return true;
+           
         }
 
     }

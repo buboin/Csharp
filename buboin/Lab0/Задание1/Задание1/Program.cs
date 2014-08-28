@@ -14,9 +14,11 @@ namespace Задание1
             const int n = 5;
             int[] mass = new int[n] { 3, 4, 5, 6, 7 };
             Console.WriteLine("Исходный массив: ");
-            for (int i = 0; i < n; i++)
+            int i = 0;
+            while (i < n)
             {
                 Console.Write("\t" + mass[i]);
+                i++;
             }
             Console.WriteLine();
 
@@ -27,29 +29,36 @@ namespace Задание1
 
             if (k >= 0)
             {
-
-                for (int i = 0; i < k; i++)// внешний цикл, запускает внутренний k раз
+                i = 0;
+                while ( i < k)// внешний цикл, запускает внутренний k раз
                 {
                     int massLast = mass[n - 1];  // понадобится для сохранения последнего элемента
-                    for (int j = n - 1; j > 0; j--)// внутренний цикл, сдвигает элементы массива на 1 позицию, последний элемент не трогается
+                    int j = n - 1;
+                    while ( j > 0)// внутренний цикл, сдвигает элементы массива на 1 позицию, последний элемент не трогается
                     {
-                        mass[j] = mass[j - 1];// сдвиг
+                        mass[j] = mass[j - 1];
+                        j--;
                     }
+
                     mass[0] = massLast;// ставим последний элемент на место 1-ого
+                    i++;
                 }
             }
 
             else
             {
-
-                for (int i = 0; i > k; i--)
+                i = 0;
+                while (  i > k)
                 {
-                    int massFirst = mass[0];  
-                    for ( int j = 1; j <=n-1; j++)
+                    int massFirst = mass[0]; 
+                    int j = 1;
+                    while (  j <=n-1)
                     {
                         mass[j-1] = mass[j];
+                        j++;
                     }
-                    mass[n-1] = massFirst; 
+                    mass[n-1] = massFirst;
+                    i--;
                 }
 
             }
@@ -57,7 +66,7 @@ namespace Задание1
 
 
             Console.WriteLine("Новый массив: ");
-            for (int i = 0; i < n; ++i)
+            for ( i = 0; i < n; ++i)
             {
                 Console.Write("\t" + mass[i]);
             }
