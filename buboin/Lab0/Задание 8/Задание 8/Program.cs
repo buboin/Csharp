@@ -58,7 +58,7 @@ namespace Задание_8
             Console.WriteLine("Максимальный элемент {0}", max);
             Console.WriteLine("Минимальный элемент {0}", min);
 
-            Console.WriteLine("Их среднее арифметическое {0:F1}", (max + min) / 2);
+            Console.WriteLine("Их среднее арифметическое {0:F1}", 1.0*(max + min) / 2);
             Console.ReadKey();
 
         }
