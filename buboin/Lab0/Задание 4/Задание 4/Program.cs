@@ -11,7 +11,7 @@ namespace Задание_4
         static void Main(string[] args)
         {
             const int n = 5;
-            int[] mass1 = new int[n] { 3, 4, 5, 6, 7 };
+            int[] mass1 = new int[n] { 3, 4, 5, 6, 8 };
             int[] mass2 = new int[n] { 7, 5, 6, 3, 4 };
             Console.WriteLine(" Первый исходный массив: ");
             int i = 0;
