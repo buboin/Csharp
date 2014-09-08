@@ -18,8 +18,8 @@ namespace Задание_9
 
 
             Console.WriteLine("ВВедите число от 1 до 9");
-           // var keyKode = Console.ReadKey();
-            // if (keyKode = ConsoleKey.Escape)
+           
+          // if (key = ConsoleKey.Escape)
           // {
           //      break;
           //  }
