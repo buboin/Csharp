@@ -16,7 +16,7 @@ namespace Задание_3
             string mass = Console.ReadLine();
             string[] str = mass.Split(' ');
 
-            for (int i = 0; i < str.Length; i++)  //проверка массива на выполнение условия
+            for (int i = 0; i <= str.Length/2; i++)  //проверка массива на выполнение условия
             {
                 Console.Write(str[i]);
                 string st = str[i];
