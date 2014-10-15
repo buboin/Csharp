@@ -23,33 +23,33 @@ namespace Задание_6
             }
 
 
-            int k = 1;
-            switch (k) 
-            { 
-                case 1:
 
-            Console.WriteLine(" \n Текущий массив:");
-            for (i=0; i<n; i++)
-                Console.Write(" " + mass[i]);
-            goto case 2;
-                case 2:
+
+            for (int j = 0; j < n; j++)
+                { 
+
+                    Console.WriteLine(" \n Текущий массив:");
+                    for (i = 0; i < n; i++)
+                    {
+                        Console.Write(" " + mass[i]);
+                    }
+                    
+                
             for (i = 0; i < n; i++)
             {
                 if (mass[i] == 0)
-                    goto default;
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Появился элемент, равный 0");
+                    j = n;
+                }
             }
-            goto case 3;
-                case 3:
+            
             for( i=0; i<n;i++)
             {
                 mass[i] = mass[i] - 1;
             }
-                    goto case 1;
-                default:
-                    Console.WriteLine();
-                    Console.WriteLine("Появился элемент, равный 0");
-                    break;
-
+                  
             }
 
             Console.ReadKey();

@@ -11,23 +11,13 @@ namespace Задание_9
         static void Main(string[] args)
         {
 
+            Console.WriteLine("Введите число от 1 до 9");
 
 
-
-
-
-
-            Console.WriteLine("ВВедите число от 1 до 9");
-           
-          // if (key = ConsoleKey.Escape)
-          // {
-          //      break;
-          //  }
-          //  else
-          //  {
-                int k = Convert.ToInt16(Console.ReadLine());
-
-
+            int k;
+            for (; Console.ReadKey(true).Key != ConsoleKey.Escape; )
+            {
+                k = Convert.ToInt16(Console.ReadLine());
                 switch (k)
                 {
                     case 1:
@@ -62,7 +52,8 @@ namespace Задание_9
                         break;
                 }
 
-           // }
+            }
+
         
 
 

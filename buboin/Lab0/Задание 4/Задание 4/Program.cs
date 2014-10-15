@@ -12,7 +12,7 @@ namespace Задание_4
         {
             const int n = 5;
             int[] mass1 = new int[n] { 3, 4, 5, 6, 8 };
-            int[] mass2 = new int[n] { 7, 5, 6, 3, 4 };
+            int[] mass2 = new int[n] { 8, 5, 6, 3, 4 };
             Console.WriteLine(" Первый исходный массив: ");
             int i = 0;
             while (i < n)
@@ -36,33 +36,39 @@ namespace Задание_4
 
              i = 0;
              j = 0;
-             while (i < n)
-             {
-                 int k = 2;
-                 switch(k)
-                 {
-                     case 1 :
-                         if (i == n)
-                             Console.WriteLine("Массивы  являются перестановкой элементов друг друга");
-                         else
-                             goto case 2;
-                         break;
+             
+             
+                 
 
-                     case 2:
-                         if (mass1[i] == mass2[j])
-                         {
-                             j++;
-                             i++;
-                             goto case 1;
-                         }
-                         else goto default;
-                     default:
-                         Console.WriteLine("Массивы не являются перестановкой элементов друг друга");
-                         break;
-                 }
-                 break;
-                                           
-             }
+
+ 
+                             while (i<n)
+                             {
+
+                                 if (i == n-1)
+                                 {
+                                     Console.WriteLine("Массивы  являются перестановкой элементов друг друга");
+                                     break;
+                                 }
+                                 else
+                                 {
+                                     if (mass1[i] == mass2[j])
+                                     {
+                                         j++;
+                                         i++;
+                                     }
+                                     else
+                                     {
+                                         Console.WriteLine("Массивы не являются перестановкой элементов друг друга");
+                                         break;
+                                     }
+                                 }   
+                                 
+                             
+                             }
+                     
+                                        
+             
             Console.ReadKey();
         }
 

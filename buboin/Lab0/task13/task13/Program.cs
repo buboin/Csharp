@@ -17,10 +17,13 @@ namespace task13
             
             Console.WriteLine( "Исходный массив");
             string s2 = mass[i];
-
-            for ( i = 0; i < mass.GetLength(0); i++)
-                   Console.Write(mass[i]+" ");
-
+            i=0;
+            do
+            {
+                Console.Write(mass[i] + " ");
+                i++;
+            }
+            while (i < mass.GetLength(0));
             Console.WriteLine();
             Console.WriteLine("Числа, не содержащие 1");
 
@@ -28,13 +31,19 @@ namespace task13
             string a = "1";
 
 
-            int o = 0;
-            for (i = 0; i < mass.GetLength(0); i++)
+           
+            i=0;
+            do
+            {
                 if (mass[i].Contains(a))
-                     o =1234567;
+                    i++;
                 else
+                {
                     Console.Write(mass[i] + "   ");
-      
+                    i++;
+                }
+            }
+            while(i < mass.GetLength(0));
 
           Console.ReadKey();  
         }

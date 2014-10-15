@@ -20,31 +20,27 @@ namespace Задание_10
                 i++;
             }
 
-            Console.WriteLine("ВВедите индекс элемента, которой не будет печататься");
+            Console.WriteLine("Введите индекс элемента, которой не будет печататься");
 
             int k = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Новый массив");
             i = 0;
-            switch (1)
+            while(i<n)
             {
-                case 1:
+               
                     if (i == k)
                     {
-                        i++;
-                        goto case 2;
+                        i++;                       
                     }
                     else
-                        
-                        goto case 2;
-                case 2:
-                    if (i < n)
+
+                        if (i < n)
                     {
                         Console.Write(mass[i]);
                         i++;
-                        goto case 1;
+                        
                     }
-                    else break;
-                    
+                   
             }
             Console.ReadKey();
         }

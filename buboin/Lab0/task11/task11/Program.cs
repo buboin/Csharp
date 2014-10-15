@@ -19,27 +19,17 @@ namespace Матрица
                 for (int j = 0; j < mtr[i].Length; j++)
                 {
                     mtr[i][j] = rnd.Next(100);
-                    System.Console.Write("{0}    ", mtr[i][j]);
+                    Console.Write("{0}    ", mtr[i][j]);
 
                 }
-                System.Console.WriteLine();
+                Console.WriteLine();
             }
-            System.Console.WriteLine();
-            System.Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
 
-            for (int i = 0; i < mtr.Length; i++)
-            {
-                for (int j = 0; j < mtr[i].Length; j++)
-                {
-                    if (i >= j)
-                    {
-                        System.Console.Write("{0}    ", mtr[i][j]);
-                    }
-                }
-                System.Console.WriteLine();
-            }
+            
 
-            System.Console.ReadKey();
+            Console.ReadKey();
 
         }
     }
