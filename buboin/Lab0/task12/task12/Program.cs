@@ -4,35 +4,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task12
+namespace Матрица
 {
     class Program
     {
         static void Main(string[] args)
         {
+            int i;
 
-            int[][] mtr = new int[5][];
+            int[][] mtr = new int[4][];
             Random rnd = new Random();
-            int i = 0;
-            while ( i < mtr.Length)
+            for (i = 0; i < mtr.Length; i++)
             {
                 mtr[i] = new int[4];
-                int j = 0;
-                while ( j < mtr[i].Length )
+                for (int j = 0; j < mtr[i].Length; j++)
                 {
                     mtr[i][j] = rnd.Next(100);
-                    System.Console.Write("{0}    ", mtr[i][j]);
-                    j++;
+                    Console.Write("{0}    ", mtr[i][j]);
 
                 }
-                System.Console.WriteLine();
-                i++;
+                Console.WriteLine();
             }
+            Console.WriteLine();
+            Console.WriteLine();
 
 
 
 
-               int[][] Mass = new int[mtr.Length][mtr[i].Length-1];
+
+
+            int k;
+            i = 0;
+
+            for (i = 0; i < mtr.Length; i++)
+            {
+                k = rnd.Next(4);
+                for (int j = 0; j < mtr[i].Length;j++ )
+                {
+
+
+                    if (j == k)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        Console.Write(mtr[i][j] + "  ");
+                        continue;
+                    }
+
+                    j++;
+                }
+                Console.WriteLine();
+
+            }
 
 
 

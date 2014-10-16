@@ -28,14 +28,14 @@ namespace task13
             Console.WriteLine("Числа, не содержащие 1");
 
 
-            string a = "1";
+            
 
 
            
             i=0;
             do
             {
-                if (mass[i].Contains(a))
+                if (mass[i].Contains("1"))
                     i++;
                 else
                 {
