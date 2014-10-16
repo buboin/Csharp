@@ -14,21 +14,32 @@ namespace Задание_7
             System.Console.WriteLine("Сортировка массива");
             System.Console.WriteLine("Введите длину массива");
             n = int.Parse(Console.ReadLine());
-            int[] mass = new int[n];
-            i=0;
-            while ( i < n)
+            string[] mass = new string[n];
+            i = 0;
+            while (i < n)
             {
                 System.Console.Write("A[{0}]=", i);
-                mass[i] = int.Parse(System.Console.ReadLine());
+                mass[i] = string.Format(System.Console.ReadLine());
                 i++;
             }
             i = 0;
-            while (i < n ) 
+            while (i < n)
             {
-                if (mass[i] % 10 == 0)
+                int val;
+                try
                 {
-                    Console.WriteLine("Круглый элемент {0} с индексом {1} ", mass[i] , i);
+                    val = int.Parse(mass[i]);
+                    if (val % 10 == 0)
+                    {
+                        Console.WriteLine("Круглый элемент {0} с индексом {1} ", mass[i], i);
+                    }
                 }
+                catch (Exception e)
+                {
+
+                }
+
+                
                 i++;
             }
 

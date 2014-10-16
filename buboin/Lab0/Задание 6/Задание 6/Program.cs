@@ -11,7 +11,7 @@ namespace Задание_6
         static void Main(string[] args)
         {
 
-             int n, i;
+            int n, i;
             System.Console.WriteLine("Сортировка массива");
             System.Console.WriteLine("Введите длину массива");
             n = int.Parse(Console.ReadLine());
@@ -24,32 +24,34 @@ namespace Задание_6
 
 
 
-
-            for (int j = 0; j < n; j++)
-                { 
-
-                    Console.WriteLine(" \n Текущий массив:");
-                    for (i = 0; i < n; i++)
-                    {
-                        Console.Write(" " + mass[i]);
-                    }
-                    
-                
-            for (i = 0; i < n; i++)
+            bool flag = false;
+            for (; !flag ;)
             {
-                if (mass[i] == 0)
+
+                Console.WriteLine(" \n Текущий массив:");
+                for (i = 0; i < n; i++)
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Появился элемент, равный 0");
-                    j = n;
+                    Console.Write(" " + mass[i]);
+                    
                 }
-            }
-            
-            for( i=0; i<n;i++)
-            {
-                mass[i] = mass[i] - 1;
-            }
-                  
+
+
+                for (i = 0; i < n; i++)
+                {
+                    if (mass[i] == 0)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Появился элемент, равный 0");
+                        flag = true;
+                        
+                    }
+                }
+
+                for (i = 0; i < n; i++)
+                {
+                    mass[i] = mass[i] - 1;
+                }
+                
             }
 
             Console.ReadKey();

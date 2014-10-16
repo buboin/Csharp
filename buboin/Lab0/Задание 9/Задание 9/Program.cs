@@ -14,42 +14,45 @@ namespace Задание_9
             Console.WriteLine("Введите число от 1 до 9");
 
 
-            int k;
-            for (; Console.ReadKey(true).Key != ConsoleKey.Escape; )
+            ConsoleKey k;
+
+            for (; ; )
             {
-                k = Convert.ToInt16(Console.ReadLine());
+                k = Console.ReadKey().Key;
+                Console.Clear();
+                Console.WriteLine("Введите число от 1 до 9");
                 switch (k)
                 {
-                    case 1:
-                        Console.WriteLine("1");
+                    case ConsoleKey.D1:
+                        Console.WriteLine("\n1");
                         break;
-                    case 2:
-                        Console.WriteLine("2");
+                    case ConsoleKey.D2:
+                        Console.WriteLine("\n2");
                         break;
-                    case 3:
-                        Console.WriteLine("3");
+                    case  ConsoleKey.D3:
+                        Console.WriteLine("\n3");
                         break;
-                    case 4:
-                        Console.WriteLine("4");
+                    case ConsoleKey.D4:
+                        Console.WriteLine("\n4");
                         break;
-                    case 5:
-                        Console.WriteLine("5");
+                    case ConsoleKey.D5:
+                        Console.WriteLine("\n5");
                         break;
-                    case 6:
-                        Console.WriteLine("6");
+                    case ConsoleKey.D6:
+                        Console.WriteLine("\n6");
                         break;
-                    case 7:
-                        Console.WriteLine("7");
+                    case ConsoleKey.D7:
+                        Console.WriteLine("\n7");
                         break;
-                    case 8:
-                        Console.WriteLine("8");
+                    case ConsoleKey.D8:
+                        Console.WriteLine("\n8");
                         break;
-                    case 9:
-                        Console.WriteLine("9");
+                    case ConsoleKey.D9:
+                        Console.WriteLine("\n9");
                         break;
-                    default:
-                        Console.WriteLine("Программа завершена");
-                        break;
+                    case ConsoleKey.Escape:
+                        return;
+                    
                 }
 
             }

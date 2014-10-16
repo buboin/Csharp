@@ -13,7 +13,7 @@ namespace task13
 
            
             int i=0;
-            String[] mass = new string[5] {"33471","764","3467","123","98765"};
+            String[] mass = new string[5] {"33471","764","3467пр","123","98765"};
             
             Console.WriteLine( "Исходный массив");
             string s2 = mass[i];
@@ -26,12 +26,7 @@ namespace task13
             while (i < mass.GetLength(0));
             Console.WriteLine();
             Console.WriteLine("Числа, не содержащие 1");
-
-
             
-
-
-           
             i=0;
             do
             {

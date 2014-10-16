@@ -25,22 +25,21 @@ namespace Задание_10
             int k = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Новый массив");
             i = 0;
-            while(i<n)
+            while (i < n)
             {
-               
-                    if (i == k)
-                    {
-                        i++;                       
-                    }
-                    else
 
-                        if (i < n)
-                    {
-                        Console.Write(mass[i]);
-                        i++;
-                        
-                    }
-                   
+                if (i != k)
+                
+                    Console.Write(mass[i]);
+
+
+                i++;
+                
+                    
+                    
+
+                
+
             }
             Console.ReadKey();
         }

@@ -32,34 +32,23 @@ namespace Матрица
 
 
 
-            for ( i = 0; i < mtr[0].Length; i++) // печать элементов под главной диагональю
+            for ( i = 0; i < mtr[0].Length; i++) // печать элементов под главной и побочной диагональю
             {
                 for (int j = 0; j < mtr.Length; j++)
                 {
                     if (i >= j)
                     {
+                        if(i+j>mtr.Length - 1)
                        Console.Write("{0}    ", mtr[i][j]);
                     }
+
+
+
                 }
                 Console.WriteLine();
             }
-
-            Console.WriteLine();
-            Console.WriteLine();
             
-            for (i = 0; i < mtr[0].Length; i++) // печать элементов под побочной диагональю
-            {
-                int j = mtr.Length;
-                while (j > 0)
-                {
-                   
-
-                    Console.Write("{0}    ", mtr[i][j]);
-
-
-                }
-                Console.WriteLine();
-            }
+            
             Console.ReadKey();
 
         }
